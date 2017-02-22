@@ -38,12 +38,12 @@ public class Player : MonoBehaviour {
 		if (controller.isGrounded) 
 		{
 			// set the movement direction based on user input and the desired speed
-			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
-			moveDirection = transform.TransformDirection(moveDirection);
+			moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0, 0);
+			moveDirection = transform.TransformDirection (moveDirection);
 			moveDirection *= speed;
 
 			// check to see if the player should jump
-			if (Input.GetButton("Jump"))
+			if (Input.GetButton ("Jump"))
 				moveDirection.y = jumpSpeed;
 		}
 
